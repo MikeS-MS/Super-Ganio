@@ -1,4 +1,5 @@
 from game_data.source.levels.mainmenulevel import *
+import game_data.engine.globals
 import pygame
 import time
 
@@ -18,6 +19,7 @@ class Game:
         self.delta_time = 0.0
         self.timer_functions = {}
         self.paused = False
+        game_data.engine.globals.Engine = self
 
     def start(self):
         self.running = True

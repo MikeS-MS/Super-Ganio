@@ -1,4 +1,4 @@
-from game_data.engine.base.camera import *
+from game_data.engine.camera import *
 import time
 
 

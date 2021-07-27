@@ -1,6 +1,6 @@
 from game_data.source.collisions.customcollisions import ObjectiveBox
-from game_data.engine.items.item import Item
-from game_data.engine.entities.base.entity import Entity
+from game_data.engine.item import Item
+from game_data.engine.base.entity import Entity
 
 
 class Rose(Entity):

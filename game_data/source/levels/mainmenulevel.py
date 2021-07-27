@@ -1,7 +1,7 @@
 from game_data.source.buttons.custombuttons import *
 from game_data.source.levels.BaseLevel import *
-from game_data.engine.levels.base.level import *
-from game_data.engine.widgets.widget import *
+from game_data.engine.base.level import *
+from game_data.engine.base.widgets import *
 import os
 
 
@@ -24,14 +24,14 @@ class MainMenu(Level):
         music_credits = Widget((screen_size[0] / 2 - 150, 90), 50, 100, "The music taken from:", 30)
         credited_game = Widget((screen_size[0] / 2 + 150, 70), 50, 100, "Terraria", 100)
 
-        main_menu_widget.add_button(PlayButton(True, True, 'Play', 60, owner=self, custom_data=[play_menu_widget]))
-        main_menu_widget.add_button(ExitButton(True, True, 'Exit', 60, owner=self))
+        main_menu_widget.add_widget(PlayButton(True, True, 'Play', 60, owner=self, custom_data=[play_menu_widget]))
+        main_menu_widget.add_widget(ExitButton(True, True, 'Exit', 60, owner=self))
 
-        play_menu_widget.add_button(StartLevelButton(True, True, 'Level1', 60, owner=self, custom_data=[BaseLevel(self.game_instance, "./game_data/assets/levels/level1/level.tmx")]))
-        play_menu_widget.add_button(StartLevelButton(True, True, 'Level2', 60, owner=self, custom_data=[BaseLevel(self.game_instance, "./game_data/assets/levels/level2/level.tmx")]))
-        play_menu_widget.add_button(StartLevelButton(True, True, 'Level3', 60, owner=self, custom_data=[BaseLevel(self.game_instance, "./game_data/assets/levels/level3/level.tmx")]))
-        play_menu_widget.add_button(OpenFileBrowser(True, True, 'Load custom', 60, owner=self, custom_data=[self.game_instance]))
-        play_menu_widget.add_button(BackButtonWidget(True, True, 'Back', 60, owner=self, custom_data={main_menu_widget: True, sprites_credits: False, music_credits: False, credited_game: False}))
+        play_menu_widget.add_widget(StartLevelButton(True, True, 'Level1', 60, owner=self, custom_data=[BaseLevel(self.game_instance, "./game_data/assets/levels/level1/level.tmx")]))
+        play_menu_widget.add_widget(StartLevelButton(True, True, 'Level2', 60, owner=self, custom_data=[BaseLevel(self.game_instance, "./game_data/assets/levels/level2/level.tmx")]))
+        play_menu_widget.add_widget(StartLevelButton(True, True, 'Level3', 60, owner=self, custom_data=[BaseLevel(self.game_instance, "./game_data/assets/levels/level3/level.tmx")]))
+        play_menu_widget.add_widget(OpenFileBrowser(True, True, 'Load custom', 60, owner=self, custom_data=[self.game_instance]))
+        play_menu_widget.add_widget(BackButtonWidget(True, True, 'Back', 60, owner=self, custom_data={main_menu_widget: True, sprites_credits: False, music_credits: False, credited_game: False}))
 
         self.background_color = (0, 100+50, 70+50)
         self.set_widget(main_menu_widget, True)

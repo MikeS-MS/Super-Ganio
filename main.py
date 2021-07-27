@@ -1,4 +1,4 @@
-from game_data.engine.base.game import *
+from game_data.engine.game import *
 import pygame
 
 

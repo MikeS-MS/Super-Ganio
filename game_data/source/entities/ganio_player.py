@@ -1,7 +1,7 @@
 from game_data.source.buttons.custombuttons import BackButtonMethod
-from game_data.engine.entities.player import Player
+from game_data.engine.player import Player
 import pygame
-from game_data.engine.widgets.widget import Widget
+from game_data.engine.base.widgets import Widget
 
 
 class Ganio(Player):
@@ -9,7 +9,7 @@ class Ganio(Player):
         super().__init__(hp, x, y, level_instance, images)
         size = self.level_instance.game_instance.window.get_window_size()
         self.menu_widget = Widget((size[0] / 2, size[1] / 2), 50, 40)
-        self.menu_widget.add_button(BackButtonMethod(True, True, 'Back to Main Menu', 60, owner=self.level_instance, custom_data=[self.level_instance.game_instance.restart]))
+        self.menu_widget.add_widget(BackButtonMethod(True, True, 'Back to Main Menu', 60, owner=self.level_instance, custom_data=[self.level_instance.game_instance.restart]))
         self.menu_widget_set = False
 
     def handle_events(self, event):

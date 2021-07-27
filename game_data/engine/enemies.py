@@ -1,5 +1,5 @@
-from game_data.engine.entities.base.entity import *
-from game_data.engine.base.collisioninfo import *
+from game_data.engine.base.entity import *
+from game_data.engine.collisioninfo import *
 
 
 class Enemy(Entity):

@@ -1,9 +1,8 @@
-from game_data.engine.levels.base.level import Level
+from game_data.engine.base.level import Level
 from game_data.source.collisions.customcollisions import *
-from game_data.engine.base.map import Map
-from game_data.engine.base.camera import *
+from game_data.engine.map import Map
+from game_data.engine.camera import *
 import pygame
-import os
 
 
 class MapLevel(Level):

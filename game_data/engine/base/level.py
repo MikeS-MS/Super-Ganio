@@ -1,7 +1,6 @@
-from game_data.engine.widgets.widget import *
-from game_data.engine.entities.base.entity import *
+from game_data.engine.base.widgets import *
+from game_data.engine.base.entity import *
 import pygame
-import os
 
 
 class Level:

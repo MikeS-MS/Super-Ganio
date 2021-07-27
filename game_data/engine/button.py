@@ -2,9 +2,7 @@ import pygame
 from enum import Enum
 
 
-class ButtonEvent(Enum):
-    Hover = 0,
-    Click = 1
+
 
 
 class Button:

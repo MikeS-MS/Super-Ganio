@@ -1,4 +1,4 @@
-from game_data.engine.levels.base.maplevel import *
+from game_data.engine.base.maplevel import *
 
 
 class CustomLevel(MapLevel):

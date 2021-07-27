@@ -1,9 +1,9 @@
 from game_data.source.entities.objectives import *
 from game_data.source.levels.base.customlevel import *
 from game_data.source.entities.ganio_player import *
-from game_data.engine.base.collision import *
-from game_data.engine.entities.enemies import *
-from game_data.engine.widgets.widget import *
+from game_data.engine.collision import *
+from game_data.engine.enemies import *
+from game_data.engine.base.widgets import *
 
 
 class BaseLevel(CustomLevel):

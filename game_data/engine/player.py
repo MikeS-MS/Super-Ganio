@@ -1,7 +1,6 @@
-from game_data.engine.base.collision import *
-from game_data.engine.levels.base.level import *
-from game_data.engine.base.collisioninfo import *
-import time
+from game_data.engine.collision import *
+from game_data.engine.base.level import *
+from game_data.engine.collisioninfo import *
 
 
 class Player(Entity):
